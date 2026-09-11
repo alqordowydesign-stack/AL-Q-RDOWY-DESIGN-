@@ -83,6 +83,6 @@ app.put("/api/admin/gallery/:id", requireAdmin, (req,res)=>{
   saveGallery(items); res.json(item);
 });
 
-app.get("/admin",(req,res)=>res.sendFile(path.join(root,"public","admin.html")));
+app.get("/admin",(req,res)=>res.sendFile(path.join(root,"public","admin.html"));
 
-app.listen(PORT,()=>console.log(`AL-QÔRDOWY DESIGN: http://localhost:${PORT}`));
+app.listen(PORT, "0.0.0.0", () => {console.log(`AL-QÔRDOWY DESIGN fonctionne sur le port ${PORT}`);});
